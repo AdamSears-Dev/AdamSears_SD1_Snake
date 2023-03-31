@@ -1,0 +1,5 @@
+C:\Users\Adam\source\repos\AdamSears_SD1_Snake\SnakeV2\obj\Debug\net5.0\SnakeV2.csproj.AssemblyReference.cache
+C:\Users\Adam\source\repos\AdamSears_SD1_Snake\SnakeV2\obj\Debug\net5.0\SnakeV2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adam\source\repos\AdamSears_SD1_Snake\SnakeV2\obj\Debug\net5.0\SnakeV2.AssemblyInfoInputs.cache
+C:\Users\Adam\source\repos\AdamSears_SD1_Snake\SnakeV2\obj\Debug\net5.0\SnakeV2.AssemblyInfo.cs
+C:\Users\Adam\source\repos\AdamSears_SD1_Snake\SnakeV2\obj\Debug\net5.0\SnakeV2.csproj.CoreCompileInputs.cache
