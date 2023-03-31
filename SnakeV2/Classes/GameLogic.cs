@@ -1,4 +1,6 @@
-﻿namespace SnakeGame.Classes
+﻿using System.Linq;
+
+namespace SnakeGame.Classes
 {
     public class GameLogic
     {
@@ -8,6 +10,10 @@
             int nextY = snake.Y[0] + directionY;
 
             if (nextX < 1 || nextX > game.Width - 1 || nextY < 1 || nextY > game.Height - 1)
+            {
+                game.SetGameOver(true);
+            }
+            else if (CheckSnakeCollision(snake))
             {
                 game.SetGameOver(true);
             }
@@ -22,6 +28,18 @@
             {
                 snake.Move(nextX, nextY, false);
             }
+        }
+
+        private static bool CheckSnakeCollision(Snake snake)
+        {
+            for (int i = 0; i < snake.X.Count - 1; i++)
+            {
+                if (snake.X[i] == snake.X.Last() && snake.Y[i] == snake.Y.Last())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

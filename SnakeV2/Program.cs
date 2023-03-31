@@ -12,6 +12,8 @@ namespace SnakeGame
             {
                 Console.Clear();
                 Console.CursorVisible = false;
+                Console.ForegroundColor= ConsoleColor.Green;
+                Console.WriteLine("____\r\n            / . .\\\r\nAS          \\  ---<\r\n             \\  /\r\n   __________/ /\r\n-=:___________/");
                 Console.WriteLine("Welcome to Snake!");
                 Console.WriteLine("\nPress 'Enter' to start the game \nUse the arrow keys to move...");
                 ConsoleKey key = Console.ReadKey(true).Key;
@@ -73,7 +75,7 @@ namespace SnakeGame
                 int rank = 1;
                 foreach (var score in orderedScores)
                 {
-                    string userIndicator = score.Initials == initials ? " <--- " : "";
+                    string userIndicator = score.Initials == initials ? " <--- " + initials : "";
                     Console.WriteLine($"{rank}. {score.Initials} - {score.Score}{userIndicator}");
                     rank++;
                 }
