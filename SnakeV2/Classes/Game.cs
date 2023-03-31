@@ -32,7 +32,7 @@ namespace SnakeGame
 
         public void UpdateSleepTime()
         {
-            SleepTime -= 10;
+            SleepTime -= 5;
             if (SleepTime < 5) SleepTime = 5;
         }
 

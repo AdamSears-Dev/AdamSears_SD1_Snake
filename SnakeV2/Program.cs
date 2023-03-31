@@ -10,6 +10,18 @@ namespace SnakeGame
         {
             while (true)
             {
+                Console.Clear();
+                Console.CursorVisible = false;
+                Console.WriteLine("Welcome to Snake!");
+                Console.WriteLine("\nPress 'Enter' to start the game \nUse the arrow keys to move...");
+                ConsoleKey key = Console.ReadKey(true).Key;
+
+                // Only start the game if the user presses Enter
+                if (key != ConsoleKey.Enter)
+                {
+                    continue;
+                }
+
                 Console.CursorVisible = false;
                 Console.SetWindowSize(50, 25);
                 Console.SetBufferSize(50, 25);
@@ -61,14 +73,13 @@ namespace SnakeGame
                 int rank = 1;
                 foreach (var score in orderedScores)
                 {
-                    string userIndicator = score.Initials == initials ? " <--- " + initials : "";
+                    string userIndicator = score.Initials == initials ? " <--- " : "";
                     Console.WriteLine($"{rank}. {score.Initials} - {score.Score}{userIndicator}");
                     rank++;
                 }
 
                 // Prompt the user to restart or quit
                 Console.WriteLine("\nPress 'R' to restart or 'Q' to quit.");
-                ConsoleKey key;
                 do
                 {
                     key = Console.ReadKey(true).Key;
