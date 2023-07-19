@@ -5,8 +5,8 @@ namespace SnakeGame
 {
     public class Game
     {
-        public int Width { get; private set; }
-        public int Height { get; private set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
         public int Score { get; private set; }
         public bool GameOver { get; private set; }
         public int SleepTime { get; private set; }
